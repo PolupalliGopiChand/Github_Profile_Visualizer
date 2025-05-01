@@ -1,30 +1,36 @@
-import {Component} from 'react'
-
+import React, {useState} from 'react'
 import './index.css'
 
-class ClickCounter extends Component {
-  state = {count: 0}
-  clicked = () => {
-    this.setState(prevState => ({count: prevState.count + 1}))
-  }
+const ClickCounter = () => {
+  // State to store the counter value
+  const [count, setCount] = useState(0)
 
-  render() {
-    const {count} = this.state
-    return (
-      <div className="container">
-        <div>
-          <h1>
-            The Button has been clicked <br />
-            <span>{count}</span> times
-          </h1>
-          <p>Click the button to increase the count!</p>
-          <button type="button" onClick={this.clicked}>
-            Click Me
-          </button>
-        </div>
+  // Function to increment the counter
+  const increment = () => setCount(prevCount => prevCount + 1)
+
+  // Function to decrement the counter
+  const decrement = () => setCount(prevCount => prevCount - 1)
+
+  // Function to reset the counter
+  const reset = () => setCount(0)
+
+  return (
+    <div className="counter-container">
+      <h1 className="counter-title">Click Counter</h1>
+      <p className="counter-display">Count: {count}</p>
+      <div className="counter-buttons">
+        <button className="btn increment" onClick={increment}>
+          Increment
+        </button>
+        <button className="btn decrement" onClick={decrement}>
+          Decrement
+        </button>
+        <button className="btn reset" onClick={reset}>
+          Reset
+        </button>
       </div>
-    )
-  }
+    </div>
+  )
 }
 
 export default ClickCounter
