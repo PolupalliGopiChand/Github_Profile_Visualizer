@@ -1,0 +1,36 @@
+.container {
+  background-color: #ffd569;
+  padding: 5% 10%;
+}
+.main-container {
+  background-color: #ffffff;
+  border-radius: 10px;
+  text-align: center;
+  padding: 5%;
+}
+.fruits-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.fruit-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.img {
+  width: 20vw;
+  padding: 20px;
+  margin: 20px;
+}
+button {
+  color: #ffffff;
+  background-color: #007bff;
+  border: 0px;
+  border-radius: 5px;
+  height: 30px;
+  width: 90px;
+}
+span {
+  color: #ffd569;
+}
