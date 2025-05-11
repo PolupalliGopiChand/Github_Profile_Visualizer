@@ -1,45 +1,72 @@
-.container {
+.speedometer-container {
   display: flex;
+  flex-direction: column;
   justify-content: center;
-  text-align: center;
   align-items: center;
-  background-color: #07080c;
-  color: #ffffff;
-  padding: 10%;
+  padding: 40px;
+  background: #07080c;
+  min-height: 100vh;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-.speedometerImg {
+.title {
+  font-size: 2.5rem;
+  color: #1e3a8a;
+  margin-bottom: 20px;
+}
+
+.speedometer-img {
   width: 80vw;
+  margin: 20px 0;
 }
 
-.buttonContainer {
+.speed-label {
+  font-size: 1.8rem;
+  color: #0f172a;
+  margin: 10px 0;
+}
+
+.limit-label {
+  font-size: 1rem;
+  color: #475569;
+  margin-bottom: 30px;
+}
+
+.button-container {
   display: flex;
-  justify-content: center;
-}
-.btn {
-  color: #ffffff;
-  height: 30px;
-  width: 90px;
-  border: 0px;
-  border-radius: 5px;
-  margin: 10px;
-}
-.btn1 {
-  background-color: #0b69ff;
-}
-.btn2 {
-  background-color: transparent;
-  border: 2px solid #94a3b8;
-  color: #94a3b8;
+  gap: 20px;
 }
 
-h1 {
-  font-size: 40px;
+.btn {
+  padding: 10px 20px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+  font-weight: bold;
 }
-h2 {
-  font-size: 30px;
+
+.accelerate {
+  background-color: #22c55e;
+  color: white;
 }
-p {
-  font-size: 15px;
-  color: #cbd5e1;
+
+.accelerate:hover {
+  background-color: #16a34a;
+}
+
+.brake {
+  background-color: #ef4444;
+  color: white;
+}
+
+.brake:hover {
+  background-color: #dc2626;
+}
+
+@media only screen and (min-width: 600px) {
+  .speedometer-img {
+    width: 40vw;
+  }
 }

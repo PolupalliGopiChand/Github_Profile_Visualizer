@@ -1,60 +1,44 @@
-import {Component} from 'react'
+import React, {useState} from 'react'
 import './index.css'
 
-class Speedometer extends Component {
-  state = {count: 0}
+const Speedometer = () => {
+  // State to hold current speed
+  const [speed, setSpeed] = useState(0)
 
-  onClickAccelerate = () => {
-    this.setState(prevState => {
-      if (prevState.count < 200) {
-        return {count: prevState.count + 10}
-      }
-      return prevState
-    })
+  // Handler to increase speed by 10, up to a max of 200
+  const handleAccelerate = () => {
+    if (speed < 200) {
+      setSpeed(prevSpeed => prevSpeed + 10)
+    }
   }
 
-  onClickBrake = () => {
-    this.setState(prevState => {
-      if (prevState.count > 0) {
-        return {count: prevState.count - 10}
-      }
-      return prevState
-    })
+  // Handler to decrease speed by 10, down to a min of 0
+  const handleApplyBrake = () => {
+    if (speed > 0) {
+      setSpeed(prevSpeed => prevSpeed - 10)
+    }
   }
 
-  render() {
-    const {count} = this.state
-    return (
-      <div className="container">
-        <div>
-          <h1>SPEEDOMETER</h1>
-          <img
-            className="speedometerImg"
-            src="https://assets.ccbp.in/frontend/react-js/speedometer-img.png"
-            alt="Speedometer"
-          />
-          <h2>Speed Is {count}mph</h2>
-          <p>Min Limit is 0mph, Max Limit is 200mph</p>
-          <div className="buttonContainer">
-            <button
-              className="btn btn1"
-              type="button"
-              onClick={this.onClickAccelerate}
-            >
-              Accelerate
-            </button>
-            <button
-              className="btn btn2"
-              type="button"
-              onClick={this.onClickBrake}
-            >
-              Apply Brake
-            </button>
-          </div>
-        </div>
+  return (
+    <div className="speedometer-container">
+      <h1 className="title">Speedometer</h1>
+      <img
+        src="https://assets.ccbp.in/frontend/react-js/speedometer-img.png"
+        alt="speedometer"
+        className="speedometer-img"
+      />
+      <h2 className="speed-label">Speed is {speed}mph</h2>
+      <p className="limit-label">Min Limit is 0mph, Max Limit is 200mph</p>
+      <div className="button-container">
+        <button className="btn accelerate" onClick={handleAccelerate}>
+          Accelerate
+        </button>
+        <button className="btn brake" onClick={handleApplyBrake}>
+          Apply Brake
+        </button>
       </div>
-    )
-  }
+    </div>
+  )
 }
 
 export default Speedometer
