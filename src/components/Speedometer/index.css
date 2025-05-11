@@ -1,0 +1,45 @@
+.container {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  background-color: #07080c;
+  color: #ffffff;
+  padding: 10%;
+}
+
+.speedometerImg {
+  width: 80vw;
+}
+
+.buttonContainer {
+  display: flex;
+  justify-content: center;
+}
+.btn {
+  color: #ffffff;
+  height: 30px;
+  width: 90px;
+  border: 0px;
+  border-radius: 5px;
+  margin: 10px;
+}
+.btn1 {
+  background-color: #0b69ff;
+}
+.btn2 {
+  background-color: transparent;
+  border: 2px solid #94a3b8;
+  color: #94a3b8;
+}
+
+h1 {
+  font-size: 40px;
+}
+h2 {
+  font-size: 30px;
+}
+p {
+  font-size: 15px;
+  color: #cbd5e1;
+}
