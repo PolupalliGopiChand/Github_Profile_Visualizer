@@ -1,0 +1,26 @@
+.charts-container {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  margin: 20px 0;
+  transition: transform 0.3s ease;
+}
+
+.charts-container:hover {
+  transform: scale(1.02);
+}
+
+.charts-title {
+  text-align: center;
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 16px;
+  color: #333;
+}
+
+.no-data {
+  text-align: center;
+  color: #999;
+  font-style: italic;
+}

@@ -1,0 +1,66 @@
+.repo-details-container {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 24px;
+  border-radius: 16px;
+  background-color: #ffffff;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+  animation: slideFade 0.5s ease-in-out;
+}
+
+.repo-name {
+  font-size: 32px;
+  color: #1f2937;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+.repo-description {
+  font-size: 18px;
+  color: #4b5563;
+  margin-bottom: 24px;
+}
+
+.repo-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  font-size: 16px;
+  color: #374151;
+  margin-bottom: 24px;
+}
+
+.visit-button,
+.back-button {
+  padding: 12px 20px;
+  background-color: #2563eb;
+  color: white;
+  font-weight: 600;
+  text-decoration: none;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.visit-button:hover,
+.back-button:hover {
+  background-color: #1e40af;
+}
+
+.repo-not-found {
+  font-size: 24px;
+  color: #dc2626;
+  margin-bottom: 20px;
+}
+
+@keyframes slideFade {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
