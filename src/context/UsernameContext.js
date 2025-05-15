@@ -1,8 +1,15 @@
-import React, {createContext, useState} from 'react'
+import React, {createContext, useState, useContext} from 'react'
 
-export const UsernameContext = createContext()
+// Create a context for storing the username
+const UsernameContext = createContext()
 
-const UsernameProvider = ({children}) => {
+// Custom hook to use the UsernameContext
+export const useUsername = () => {
+  return useContext(UsernameContext)
+}
+
+// Provider component to wrap around parts of the app that need access to the username
+export const UsernameProvider = ({children}) => {
   const [username, setUsername] = useState('')
 
   return (
@@ -11,5 +18,3 @@ const UsernameProvider = ({children}) => {
     </UsernameContext.Provider>
   )
 }
-
-export default UsernameProvider

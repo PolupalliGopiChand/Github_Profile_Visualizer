@@ -1,0 +1,39 @@
+.repoDetails__container {
+  background-color: #ffffff;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 800px;
+  margin: 1rem auto;
+}
+
+.repoDetails__title {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #333333;
+  margin-bottom: 1rem;
+}
+
+.repoDetails__description {
+  font-size: 1.1rem;
+  color: #666666;
+  margin-bottom: 1.5rem;
+}
+
+.repoDetails__info {
+  display: flex;
+  gap: 1.5rem;
+  font-size: 1rem;
+  color: #555555;
+}
+
+.repoDetails__infoItem {
+  display: flex;
+  flex-direction: column;
+}
+
+.repoDetails__infoItem strong {
+  font-weight: bold;
+  color: #333333;
+}
