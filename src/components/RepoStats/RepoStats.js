@@ -10,18 +10,18 @@ const RepoStats = ({repos}) => {
   )
 
   return (
-    <div className="repoStats__container">
-      <h2 className="repoStats__title">Repository Stats</h2>
-      <div className="repoStats__stats">
-        <div className="repoStats__stat">
+    <div className='repoStats__container'>
+      <h2 className='repoStats__title'>Repository Stats</h2>
+      <div className='repoStats__stats'>
+        <div className='repoStats__stat'>
           <h3>Total Stars</h3>
           <p>{totalStars}</p>
         </div>
-        <div className="repoStats__stat">
+        <div className='repoStats__stat'>
           <h3>Total Forks</h3>
           <p>{totalForks}</p>
         </div>
-        <div className="repoStats__stat">
+        <div className='repoStats__stat'>
           <h3>Total Open Issues</h3>
           <p>{totalOpenIssues}</p>
         </div>
