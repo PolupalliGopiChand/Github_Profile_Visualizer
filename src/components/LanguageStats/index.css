@@ -1,0 +1,32 @@
+.language-stats {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.language-stats h3 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.chart-container {
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.language-stats-container {
+  text-align: center;
+  padding: 20px;
+}
+
+.language-stats-container.error {
+  color: #d32f2f;
+}

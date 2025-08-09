@@ -1,0 +1,40 @@
+.repo-stats {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.repo-stats h3 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.stats-card {
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  text-align: center;
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.stats-card p {
+  margin: 8px 0;
+  color: #333;
+  font-size: 0.9em;
+}
+
+.repo-stats-container {
+  text-align: center;
+  padding: 20px;
+}
+
+.repo-stats-container.error {
+  color: #d32f2f;
+}

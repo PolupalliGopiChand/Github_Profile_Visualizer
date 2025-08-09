@@ -1,0 +1,75 @@
+.repo-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.repo-list h3 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.repo-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.repo-card {
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 15px;
+  cursor: pointer;
+  transition: transform 0.2s;
+  border: none; /* Reset default button border */
+  text-align: left; /* Align text like a card */
+  font-size: inherit; /* Prevent button font changes */
+  appearance: none; /* Remove default button styling */
+}
+
+.repo-card:hover {
+  transform: translateY(-5px);
+}
+
+.repo-card:focus {
+  outline: 2px solid #36a2eb; /* Add focus style for accessibility */
+  outline-offset: 2px;
+}
+
+.repo-card h4 {
+  margin: 0;
+  color: #333;
+  font-size: 1.2em;
+}
+
+.description {
+  color: #444;
+  margin: 10px 0;
+  font-size: 0.9em;
+}
+
+.stats {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+.stats p {
+  margin: 0;
+  color: #333;
+  font-size: 0.85em;
+}
+
+.repo-list-container {
+  text-align: center;
+  padding: 20px;
+}
+
+.repo-list-container.error {
+  color: #d32f2f;
+}
