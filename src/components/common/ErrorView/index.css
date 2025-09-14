@@ -1,0 +1,213 @@
+.failureContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background: linear-gradient(
+    135deg,
+    rgba(15, 23, 42, 0.95),
+    rgba(30, 41, 59, 0.8)
+  );
+  border-radius: 28px;
+  box-shadow: 0 12px 30px rgba(239, 68, 68, 0.3);
+  border: 1px solid #ef4444;
+  max-width: 800px;
+  margin: auto;
+  padding: 60px 40px;
+  animation: fadeInUp 0.8s ease-out;
+  backdrop-filter: blur(20px);
+  position: relative;
+  overflow: hidden;
+}
+
+.failureContainer::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, #ef4444, #f97316, #dc2626);
+  box-shadow: 0 2px 8px rgba(239, 68, 68, 0.3);
+}
+
+.errorName {
+  font-family:
+    'Inter',
+    -apple-system,
+    BlinkMacSystemFont,
+    'Segoe UI',
+    'Roboto',
+    sans-serif;
+  font-size: 36px;
+  font-weight: 800;
+  margin: 0 0 32px 0;
+  color: #ffffff;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  background: linear-gradient(135deg, #ef4444, #f97316);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.error-view {
+  height: auto;
+  width: 100%;
+}
+
+.tryButton {
+  color: white;
+  border: none;
+  padding: 20px 40px;
+  border-radius: 16px;
+  font-family:
+    'Inter',
+    -apple-system,
+    BlinkMacSystemFont,
+    'Segoe UI',
+    'Roboto',
+    sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  background: linear-gradient(135deg, #ef4444, #dc2626);
+  box-shadow: 0 12px 30px rgba(239, 68, 68, 0.3);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  position: relative;
+  overflow: hidden;
+  min-width: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+}
+
+.tryButton::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.2),
+    transparent
+  );
+  transition: left 0.5s;
+}
+
+.tryButton::after {
+  content: '🔄';
+  position: absolute;
+  right: 20px;
+  opacity: 0;
+  transition: all 0.3s ease;
+  font-size: 16px;
+}
+
+.tryButton:hover::before {
+  left: 100%;
+}
+
+.tryButton:hover {
+  background: linear-gradient(135deg, #dc2626, #b91c1c);
+  transform: translateY(-3px);
+  box-shadow: 0 12px 25px rgba(239, 68, 68, 0.4);
+}
+
+.tryButton:hover::after {
+  opacity: 1;
+  transform: rotate(180deg);
+}
+
+.tryButton:active {
+  transform: translateY(-1px);
+}
+
+.tryButton:focus {
+  outline: 2px solid #c4b5fd;
+  outline-offset: 2px;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Animation for the error container */
+.failureContainer {
+  animation: fadeInUp 0.6s ease-out;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive design */
+@media screen and (max-width: 768px) {
+  .failureContainer {
+    margin: 20px;
+    padding: 30px 20px;
+  }
+
+  .heading {
+    font-size: 24px;
+  }
+
+  .error-view {
+    width: 150px;
+    height: 150px;
+  }
+
+  .errorName {
+    font-size: 16px;
+  }
+
+  .tryButton {
+    padding: 14px 28px;
+    font-size: 14px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .failureContainer {
+    max-width: 600px;
+    padding: 50px 40px;
+  }
+
+  .heading {
+    font-size: 32px;
+  }
+
+  .error-view {
+    width: 250px;
+    height: 250px;
+  }
+
+  .errorName {
+    font-size: 20px;
+  }
+
+  .tryButton {
+    padding: 18px 36px;
+    font-size: 18px;
+  }
+}
