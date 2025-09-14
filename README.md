@@ -667,8 +667,6 @@ If you complete the main features of the project you can try out the below featu
 
 - Also it's important to publish your code frequently using `Step - 4` in the Instructions tab.
 
-> ### _Things to Keep in Mind_
->
-> - All components you implement should go in the `src/components` directory.
-> - **Do not remove the pre-filled code**
-> - Want to quickly review some of the concepts you’ve been learning? Take a look at the Cheat Sheets
+
+### Published Link
+[View Project](https://gpv.ccbp.tech) 
